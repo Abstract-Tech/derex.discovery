@@ -1,5 +1,5 @@
 ---
-project_name: discovery_complete
+project_name: discovery-complete
 plugins:
   derex.discovery: {}
   derex.ecommerce: {}
