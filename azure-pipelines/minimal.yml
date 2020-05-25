@@ -19,8 +19,8 @@ jobs:
       - script: |
           set -ex
           cd tests/fixtures/minimal/
-          derex reset-mysql
-          derex discovery reset-mysql
+          derex mysql reset --force
+          derex discovery mysql reset --force
           derex discovery load-fixtures
           derex discovery create-index
         displayName: "Prime Mysql and Elasticsearch"
