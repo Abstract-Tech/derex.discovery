@@ -87,7 +87,7 @@ def generate_local_docker_compose(project: Project) -> Path:
 class DiscoveryService:
     @staticmethod
     @runner.hookimpl
-    def local_compose_options(
+    def ddc_project_options(
         project: Project,
     ) -> Optional[Dict[str, Union[str, List[str]]]]:
         if "derex.discovery" in project.config.get("plugins", {}):
@@ -96,7 +96,7 @@ class DiscoveryService:
             return {
                 "options": options,
                 "name": "discovery",
-                "priority": "<local-derex",
+                "priority": "_end",
                 "variant": "openedx",
             }
         return None

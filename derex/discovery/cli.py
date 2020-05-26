@@ -2,9 +2,6 @@ import logging
 
 import click
 from derex.runner.cli import ensure_project
-from derex.runner.compose_utils import run_compose
-from derex.runner.project import ProjectRunMode
-from derex.runner.utils import abspath_from_egg
 
 logger = logging.getLogger(__name__)
 
@@ -24,6 +21,9 @@ def reset_mysql(project):
     """Reset the discovery mysql database"""
     from derex.runner.docker import check_services
     from derex.runner.mysql import wait_for_mysql
+    from derex.runner.project import ProjectRunMode
+    from derex.runner.utils import abspath_from_egg
+    from derex.runner.ddc import run_ddc_project
 
     if project.runmode is not ProjectRunMode.debug:
         click.get_current_context().fail(
@@ -39,7 +39,7 @@ def reset_mysql(project):
     restore_dump_path = abspath_from_egg(
         "derex.discovery", "derex/discovery/restore_dump.py"
     )
-    run_compose(
+    run_ddc_project(
         [
             "run",
             "--rm",
@@ -60,7 +60,8 @@ def reset_mysql(project):
 @ensure_project
 def load_fixtures(project):
     """Load fixtures from the plugin fixtures directory"""
-    from derex.runner.compose_utils import run_compose
+    from derex.runner.ddc import run_ddc_project
+    from derex.runner.utils import abspath_from_egg
 
     fixtures_dir = project.get_plugin_directories(__package__).get("fixtures")
     if fixtures_dir is None:
@@ -79,7 +80,7 @@ def load_fixtures(project):
         "python",
         "/openedx/discovery/load_fixtures.py",
     ]
-    run_compose(compose_args, project=project)
+    run_ddc_project(compose_args, project=project)
     return
 
 
@@ -89,6 +90,7 @@ def load_fixtures(project):
 def refresh_course_metadata(project):
     """Run discovery `refresh_course_metadata` Django command"""
     from derex.runner.docker import check_services
+    from derex.runner.ddc import run_ddc_project
 
     if not check_services(["elasticsearch"]):
         click.echo(
@@ -96,7 +98,7 @@ def refresh_course_metadata(project):
         )
         return
 
-    run_compose(
+    run_ddc_project(
         ["run", "--rm", "discovery", "python", "manage.py", "refresh_course_metadata"],
         project=project,
     )
@@ -109,6 +111,7 @@ def refresh_course_metadata(project):
 def create_index(project):
     """Run discovery `install_es_indexes` Django command"""
     from derex.runner.docker import check_services
+    from derex.runner.ddc import run_ddc_project
 
     if not check_services(["elasticsearch"]):
         click.echo(
@@ -116,7 +119,7 @@ def create_index(project):
         )
         return
 
-    run_compose(
+    run_ddc_project(
         ["run", "--rm", "discovery", "python", "manage.py", "install_es_indexes"],
         project=project,
     )
@@ -129,6 +132,7 @@ def create_index(project):
 def update_index(project):
     """Run discovery `update_index` Django command"""
     from derex.runner.docker import check_services
+    from derex.runner.ddc import run_ddc_project
 
     if not check_services(["elasticsearch"]):
         click.echo(
@@ -136,7 +140,7 @@ def update_index(project):
         )
         return
 
-    run_compose(
+    run_ddc_project(
         [
             "run",
             "--rm",
