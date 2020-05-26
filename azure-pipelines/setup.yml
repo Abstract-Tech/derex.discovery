@@ -7,8 +7,8 @@ steps:
   - script: |
       set -ex
       pip3 install -U pip setuptools
-      [ -z "${{ parameters.PIN_VERSIONS }}" ] && pip3 install -r requirements_dev.txt .
-      [ ! -z "${{ parameters.PIN_VERSIONS }}" ] && pip3 install . \
+      [ "${{ parameters.JOB_VARIANT }}" == "Pinned" ] && pip3 install -r requirements_dev.txt .
+      [ "${{ parameters.JOB_VARIANT }}" == "UnPinned" ] && pip3 install . \
         https://github.com/Abstract-Tech/derex.runner/tarball/master#egg=derex.runner \
         https://github.com/Abstract-Tech/derex.ecommerce/tarball/master#egg=derex.ecommerce
       true

@@ -2,9 +2,6 @@ parameters:
   - name: JOB_VARIANT
     type: string
     default: ""
-  - name: PIN_VERSIONS
-    type: string
-    default: "true"
 
 jobs:
   - job: Complete${{ parameters.JOB_VARIANT }}
@@ -14,7 +11,7 @@ jobs:
     steps:
       - template: setup.yml
         parameters:
-          PIN_VERSIONS: ${{ parameters.PIN_VERSIONS }}
+          JOB_VARIANT: ${{ parameters.JOB_VARIANT }}
 
       - script: |
           set -ex
