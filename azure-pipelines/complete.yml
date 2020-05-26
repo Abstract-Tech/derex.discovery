@@ -22,7 +22,7 @@ jobs:
           derex mysql reset --force
           derex ecommerce reset-mysql
           derex ecommerce load-fixtures
-          derex discovery mysql reset
+          derex discovery reset-mysql
           derex discovery load-fixtures
           derex discovery create-index
         displayName: "Prime Mysql and Elasticsearch"

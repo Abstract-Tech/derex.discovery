@@ -27,8 +27,8 @@ def main():
     admin_cursor = get_connection(include_db=False).cursor()
     database_name = settings.DATABASES["default"]["NAME"]
     print('Resetting mysql database "{}"'.format(database_name))
-    admin_cursor.execute("DROP DATABASE IF EXISTS {}".format(database_name))
-    admin_cursor.execute("CREATE DATABASE {} CHARACTER SET utf8".format(database_name))
+    admin_cursor.execute("DROP DATABASE IF EXISTS `{}`".format(database_name))
+    admin_cursor.execute("CREATE DATABASE `{}` CHARACTER SET utf8".format(database_name))
     sql = get_dump_file_contents()
     cursor = get_connection().cursor()
     print('Loading dump file "{}"'.format(DUMP_FILE_PATH))

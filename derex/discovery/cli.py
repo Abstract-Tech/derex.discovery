@@ -23,7 +23,7 @@ def discovery(ctx):
 def reset_mysql(project):
     """Reset the discovery mysql database"""
     from derex.runner.docker import check_services
-    from derex.runner.docker import wait_for_mysql
+    from derex.runner.mysql import wait_for_mysql
 
     if project.runmode is not ProjectRunMode.debug:
         click.get_current_context().fail(
