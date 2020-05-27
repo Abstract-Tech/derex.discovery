@@ -3,9 +3,9 @@ Derex Discovery
 ===========
 
 
-.. image:: https://dev.azure.com/abstract-technology/derex.discovery/_apis/build/status/Abstract-Tech.derex.discovery?branchName=master
-    :target: https://dev.azure.com/abstract-technology/derex.discovery/_build
-
+.. image:: https://dev.azure.com/abstract-technology/derex/_apis/build/status/Abstract-Tech.derex.discovery?branchName=master
+   :target: https://dev.azure.com/abstract-technology/derex/_build
+   :alt: Test results
 
 Derex Plugin to integrate Open edX Discovery
 
