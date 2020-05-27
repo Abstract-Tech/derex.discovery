@@ -97,9 +97,9 @@ COPY ./wsgi_whitenoise.py ./course_discovery/wsgi_whitenoise.py
 COPY ./discovery.patch ./discovery.patch
 RUN git apply discovery.patch
 
-EXPOSE 4910
+EXPOSE 80
 CMD gunicorn \
-    --bind=0.0.0.0:4910 \
+    --bind=0.0.0.0:80 \
     --workers 2 \
     --max-requests=1000 \
     course_discovery.wsgi_whitenoise:application

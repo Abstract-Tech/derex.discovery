@@ -5,12 +5,12 @@
     "fields": {
         "user": 1,
         "name": "discovery",
-        "url": "http://discovery.localhost:4910",
-        "redirect_uri": "http://discovery.localhost:4910/complete/edx-oidc/",
+        "url": "http://discovery.discovery-complete.localhost",
+        "redirect_uri": "http://discovery.discovery-complete.localhost/complete/edx-oidc/",
         "client_id": "discovery-key",
         "client_secret": "discovery-secret",
         "client_type": 0,
-        "logout_uri": "http://discovery.localhost:4910/logout"
+        "logout_uri": "http://discovery.discovery-complete.localhost/logout"
     }
 }
 ]

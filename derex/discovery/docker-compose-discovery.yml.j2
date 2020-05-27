@@ -14,11 +14,11 @@ services:
       {% endif %}
     {% if project.runmode.value == "debug" -%}
     command:
-      sh -c 'exec ./manage.py runserver --noreload 0:4910'
+      sh -c 'exec ./manage.py runserver --noreload 0:80'
     {% else -%}
     command:
       sh -c 'exec gunicorn
-        --bind=0.0.0.0:4910
+        --bind=0.0.0.0:80
         --workers 2
         --max-requests=1000
         course_discovery.wsgi_whitenoise:application'
@@ -31,24 +31,10 @@ services:
       {%- for key, value in project.get_container_env().items() %}
       {{ key }}: {{ value | tojson }}
       {%- endfor %}
-    ports:
-      - 4910:4910
     networks:
       derex:
         aliases:
-          - discovery.localhost
-
-  lms:
-    networks:
-      derex:
-        aliases:
-          - lms.localhost
-
-  cms:
-    networks:
-      derex:
-        aliases:
-          - cms.localhost
+          - discovery.{{ project.name }}.localhost.derex
 
 volumes:
   derex_{{ project.name }}_media:

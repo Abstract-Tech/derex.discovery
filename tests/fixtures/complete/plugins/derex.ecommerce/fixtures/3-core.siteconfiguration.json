@@ -27,7 +27,7 @@
         "enable_sailthru": false,
         "base_cookie_domain": "",
         "enable_embargo_check": false,
-        "discovery_api_url": "http://discovery.localhost:4910/api/v1/",
+        "discovery_api_url": "http://discovery.discovery-complete.localhost/api/v1/",
         "journals_api_url": null,
         "enable_apple_pay": false,
         "enable_partial_program": false
