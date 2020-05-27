@@ -24,6 +24,7 @@ services:
         course_discovery.wsgi_whitenoise:application'
     {% endif -%}
     environment:
+      DEREX_PROJECT: {{ project.name }}
       SERVICE_VARIANT: discovery
       DJANGO_SETTINGS_MODULE: course_discovery.settings.derex_project.{{ active_settings }}
       MYSQL_DB_NAME: "{{ project.name }}_discovery"
