@@ -96,7 +96,6 @@ class DiscoveryService:
             return {
                 "options": options,
                 "name": "discovery",
-                "priority": "_end",
-                "variant": "openedx",
+                "priority": "<base-project",
             }
         return None
