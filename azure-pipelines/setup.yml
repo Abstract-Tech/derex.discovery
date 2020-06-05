@@ -1,3 +1,7 @@
+parameters:
+  - name: JOB_VARIANT
+    type: string
+
 steps:
   - task: UsePythonVersion@0
     inputs:
@@ -21,10 +25,10 @@ steps:
       sudo mkdir /etc/derex/
       echo ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ | sudo tee /etc/derex/main_secret
       pip3 install -U pip setuptools
-      [ "${{ parameters.JOB_VARIANT }}" == "Pinned" ] && pip3 install -r requirements.txt .
-      [ "${{ parameters.JOB_VARIANT }}" == "UnPinned" ] && pip3 install . \
+      { [ "${{ parameters.JOB_VARIANT }}" == "Pinned" ] && pip3 install -r requirements.txt . || true; }
+      { [ "${{ parameters.JOB_VARIANT }}" == "UnPinned" ] && pip3 install . \
         https://github.com/Abstract-Tech/derex.runner/tarball/master#egg=derex.runner \
-        https://github.com/Abstract-Tech/derex.ecommerce/tarball/master#egg=derex.ecommerce
+        https://github.com/Abstract-Tech/derex.ecommerce/tarball/master#egg=derex.ecommerce || true; }
     displayName: 'Install derex.discovery'
 
   - script: ddc-services up -d
