@@ -5,6 +5,6 @@
 #    pip-compile requirements.in
 #
 https://github.com/Abstract-Tech/derex.ecommerce/tarball/f3d20e71c6691f295dee0f0033eaddbc41bd6fa2#egg=derex.ecommerce  # via -r requirements.in
-https://github.com/Abstract-Tech/derex.runner/tarball/master#egg=derex.runner  # via -r requirements.in, derex.ecommerce
+https://github.com/Abstract-Tech/derex.runner/tarball/e83b019be5db61a71f8f7350d02bae0baf0f3926#egg=derex.runner  # via -r requirements.in, derex.ecommerce
 jinja2==2.11.2            # via derex.ecommerce
 markupsafe==1.1.1         # via jinja2
