@@ -19,7 +19,7 @@ def discovery(ctx):
 @ensure_project
 def reset_mysql(project):
     """Reset the discovery mysql database"""
-    from derex.runner.docker import check_services
+    from derex.runner.docker_utils import check_services
     from derex.runner.mysql import wait_for_mysql
     from derex.runner.project import ProjectRunMode
     from derex.runner.utils import abspath_from_egg
@@ -89,7 +89,7 @@ def load_fixtures(project):
 @ensure_project
 def refresh_course_metadata(project):
     """Run discovery `refresh_course_metadata` Django command"""
-    from derex.runner.docker import check_services
+    from derex.runner.docker_utils import check_services
     from derex.runner.ddc import run_ddc_project
 
     if not check_services(["elasticsearch"]):
@@ -110,7 +110,7 @@ def refresh_course_metadata(project):
 @ensure_project
 def create_index(project):
     """Run discovery `install_es_indexes` Django command"""
-    from derex.runner.docker import check_services
+    from derex.runner.docker_utils import check_services
     from derex.runner.ddc import run_ddc_project
 
     if not check_services(["elasticsearch"]):
@@ -131,7 +131,7 @@ def create_index(project):
 @ensure_project
 def update_index(project):
     """Run discovery `update_index` Django command"""
-    from derex.runner.docker import check_services
+    from derex.runner.docker_utils import check_services
     from derex.runner.ddc import run_ddc_project
 
     if not check_services(["elasticsearch"]):
