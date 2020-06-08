@@ -41,7 +41,7 @@ jobs:
       - script: |
           set -ex
           COUNT=$(
-            curl -sf http://discovery.discovery-minimal.localhost/health/ \
+            curl -sf http://discovery.discovery-complete.localhost/health/ \
               --connect-timeout 30 \
               --retry 5 \
               --retry-delay 5 \
