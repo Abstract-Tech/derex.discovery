@@ -96,6 +96,6 @@ class DiscoveryService:
             return {
                 "options": options,
                 "name": "discovery",
-                "priority": "<base-project",
+                "priority": "<local-project",
             }
         return None
