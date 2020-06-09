@@ -5,12 +5,12 @@
     "fields": {
         "user": 1,
         "name": "ecommerce",
-        "url": "http://localhost:4900",
-        "redirect_uri": "http://localhost:4900/complete/edx-oidc/",
+        "url": "http://ecommerce.discovery-complete.localhost",
+        "redirect_uri": "http://ecommerce.discovery-complete.localhost/complete/edx-oidc/",
         "client_id": "ecommerce-key",
         "client_secret": "ecommerce-secret",
         "client_type": 0,
-        "logout_uri": "http://localhost:4900/logout"
+        "logout_uri": "http://ecommerce.discovery-complete.localhost/logout"
     }
 },
 {

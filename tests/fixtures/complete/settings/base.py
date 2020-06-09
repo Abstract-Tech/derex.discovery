@@ -13,7 +13,7 @@ JWT_AUTH["JWT_PRIVATE_SIGNING_JWK"] = JWT_PRIVATE_SIGNING_JWK
 JWT_AUTH["JWT_PUBLIC_SIGNING_JWK_SET"] = JWT_PUBLIC_SIGNING_JWK_SET
 JWT_AUTH["JWT_SIGNING_ALGORITHM"] = JWT_SIGNING_ALGORITHM
 
-ECOMMERCE_PUBLIC_URL_ROOT = "http://ecommerce.localhost:4900"
-ECOMMERCE_API_URL = "http://ecommerce.localhost:4900/api/v2"
+ECOMMERCE_PUBLIC_URL_ROOT = "http://ecommerce.discovery-complete.localhost"
+ECOMMERCE_API_URL = "http://ecommerce.discovery-complete.localhost.derex/api/v2"
 
 COURSE_CATALOG_API_URL = "http://discovery.discovery-complete.localhost"

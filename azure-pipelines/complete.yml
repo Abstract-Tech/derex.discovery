@@ -17,6 +17,8 @@ jobs:
           set -ex
           cd tests/fixtures/complete/
           derex mysql reset --force
+          derex reset-rabbitmq
+          derex create-bucket
           derex ecommerce reset-mysql
           derex ecommerce load-fixtures
           derex discovery reset-mysql
