@@ -1,4 +1,4 @@
 ---
-project_name: discovery_minimal
+project_name: discovery-minimal
 plugins:
   derex.discovery: {}

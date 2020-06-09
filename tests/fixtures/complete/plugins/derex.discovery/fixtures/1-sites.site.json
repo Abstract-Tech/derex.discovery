@@ -3,8 +3,8 @@
     "model": "sites.site",
     "pk": 1,
     "fields": {
-        "domain": "localhost:4910",
-        "name": "localhost:4910"
+        "domain": "discovery.discovery-complete.local",
+        "name": "discovery.discovery-complete.local"
     }
 }
 ]

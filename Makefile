@@ -86,8 +86,8 @@ install: clean ## install the package to the active Python's site-packages
 
 requirements: requirements.txt requirements_dev.txt  ## rebuild requirement files
 
-requirements.txt:
+requirements.txt: requirements.in
 	pip-compile requirements.in
 
-requirements_dev.txt:
+requirements_dev.txt: requirements_dev.in requirements.txt
 	pip-compile requirements_dev.in

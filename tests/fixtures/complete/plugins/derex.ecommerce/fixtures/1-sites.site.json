@@ -3,8 +3,8 @@
     "model": "sites.site",
     "pk": 1,
     "fields": {
-        "domain": "localhost:4900",
-        "name": "localhost:4900"
+        "domain": "ecommerce.discovery-complete.localhost",
+        "name": "ecommerce.discovery-complete.localhost"
     }
 }
 ]

@@ -1,12 +1,12 @@
 ---
-project_name: discovery_complete
+project_name: discovery-complete
 plugins:
   derex.discovery: {}
   derex.ecommerce: {}
 
 variables:
   ALL_JWT_ISSUER:
-    base: http://lms.localhost:4700/oauth2
+    base: http://discovery-complete.localhost/oauth2
   ALL_JWT_AUDIENCE:
     base: lms-key
   ALL_JWT_SECRET_KEY:

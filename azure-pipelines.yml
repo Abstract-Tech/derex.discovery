@@ -10,19 +10,15 @@ jobs:
   - template: azure-pipelines/minimal.yml
     parameters:
       JOB_VARIANT: UnPinned
-      PIN_VERSIONS:
 
   - template: azure-pipelines/minimal.yml
     parameters:
       JOB_VARIANT: Pinned
-      PIN_VERSIONS: yes
 
   - template: azure-pipelines/complete.yml
     parameters:
       JOB_VARIANT: UnPinned
-      PIN_VERSIONS:
 
   - template: azure-pipelines/complete.yml
     parameters:
       JOB_VARIANT: Pinned
-      PIN_VERSIONS: yes

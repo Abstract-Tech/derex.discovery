@@ -2,9 +2,6 @@ parameters:
   - name: JOB_VARIANT
     type: string
     default: ""
-  - name: PIN_VERSIONS
-    type: string
-    default: "true"
 
 jobs:
   - job: Minimal${{ parameters.JOB_VARIANT }}
@@ -14,12 +11,12 @@ jobs:
     steps:
       - template: setup.yml
         parameters:
-          PIN_VERSIONS: ${{ parameters.PIN_VERSIONS }}
+          JOB_VARIANT: ${{ parameters.JOB_VARIANT }}
 
       - script: |
           set -ex
           cd tests/fixtures/minimal/
-          derex reset-mysql
+          derex mysql reset --force
           derex discovery reset-mysql
           derex discovery load-fixtures
           derex discovery create-index
@@ -43,7 +40,7 @@ jobs:
       - script: |
           set -ex
           COUNT=$(
-            curl -sf http://localhost:4910/health/ \
+            curl -sf http://discovery.discovery-minimal.localhost/health/ \
               --connect-timeout 30 \
               --retry 5 \
               --retry-delay 5 \
