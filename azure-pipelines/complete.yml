@@ -42,16 +42,11 @@ jobs:
 
       - script: |
           set -ex
-          COUNT=$(
-            curl -sf http://discovery.discovery-complete.localhost/health/ \
-              --connect-timeout 30 \
-              --retry 5 \
-              --retry-delay 5 \
-              --retry-connrefused | grep -o "OK" | wc -l
-          )
-          if [ $COUNT != 2 ]; then
-              exit 1
-          fi
+          curl -f http://discovery.discovery-complete.localhost/health/ \
+            --connect-timeout 30 \
+            --retry 5 \
+            --retry-delay 5 \
+            --retry-connrefused
         displayName: "Curl the Discovery service"
 
       - script: |
