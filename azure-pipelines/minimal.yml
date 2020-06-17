@@ -44,6 +44,7 @@ jobs:
             --retry 5 \
             --retry-delay 5 \
             --retry-connrefused
+          [ "$(curl -f http://discovery.discovery-minimal.localhost/health/ | jq '.overall_status')" == '"OK"' ]
         displayName: "Curl the Discovery service"
 
       - script: |
