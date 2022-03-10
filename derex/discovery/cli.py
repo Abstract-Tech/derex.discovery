@@ -9,8 +9,7 @@ logger = logging.getLogger(__name__)
 @click.group()
 @click.pass_context
 def discovery(ctx):
-    """Derex edX Discovery plugin: commands to manage the Open edX Discovery service
-    """
+    """Derex edX Discovery plugin: commands to manage the Open edX Discovery service"""
     pass
 
 
@@ -19,23 +18,17 @@ def discovery(ctx):
 @ensure_project
 def reset_mysql(project):
     """Reset the discovery mysql database"""
-    from derex.runner.docker_utils import check_services
-    from derex.runner.mysql import wait_for_mysql
+    from derex.runner.ddc import run_ddc_project
+    from derex.runner.docker_utils import wait_for_service
     from derex.runner.project import ProjectRunMode
     from derex.runner.utils import abspath_from_egg
-    from derex.runner.ddc import run_ddc_project
 
     if project.runmode is not ProjectRunMode.debug:
         click.get_current_context().fail(
             "This command can only be run in `debug` runmode"
         )
-    if not check_services(["mysql"]):
-        click.echo(
-            "Mysql service not found.\nMaybe you forgot to run\nddc-services up -d"
-        )
-        return
 
-    wait_for_mysql()
+    wait_for_service("mysql")
     restore_dump_path = abspath_from_egg(
         "derex.discovery", "derex/discovery/restore_dump.py"
     )
@@ -49,7 +42,7 @@ def reset_mysql(project):
             "python",
             "/openedx/discovery/restore_dump.py",
         ],
-        project=project,
+        project,
     )
     return 0
 
@@ -80,7 +73,7 @@ def load_fixtures(project):
         "python",
         "/openedx/discovery/load_fixtures.py",
     ]
-    run_ddc_project(compose_args, project=project)
+    run_ddc_project(compose_args, project)
     return
 
 
@@ -89,8 +82,8 @@ def load_fixtures(project):
 @ensure_project
 def refresh_course_metadata(project):
     """Run discovery `refresh_course_metadata` Django command"""
-    from derex.runner.docker_utils import check_services
     from derex.runner.ddc import run_ddc_project
+    from derex.runner.docker_utils import check_services
 
     if not check_services(["elasticsearch"]):
         click.echo(
@@ -100,7 +93,7 @@ def refresh_course_metadata(project):
 
     run_ddc_project(
         ["run", "--rm", "discovery", "python", "manage.py", "refresh_course_metadata"],
-        project=project,
+        project,
     )
     return 0
 
@@ -110,8 +103,8 @@ def refresh_course_metadata(project):
 @ensure_project
 def create_index(project):
     """Run discovery `install_es_indexes` Django command"""
-    from derex.runner.docker_utils import check_services
     from derex.runner.ddc import run_ddc_project
+    from derex.runner.docker_utils import check_services
 
     if not check_services(["elasticsearch"]):
         click.echo(
@@ -121,7 +114,7 @@ def create_index(project):
 
     run_ddc_project(
         ["run", "--rm", "discovery", "python", "manage.py", "install_es_indexes"],
-        project=project,
+        project,
     )
     return 0
 
@@ -131,8 +124,8 @@ def create_index(project):
 @ensure_project
 def update_index(project):
     """Run discovery `update_index` Django command"""
-    from derex.runner.docker_utils import check_services
     from derex.runner.ddc import run_ddc_project
+    from derex.runner.docker_utils import check_services
 
     if not check_services(["elasticsearch"]):
         click.echo(
@@ -150,6 +143,6 @@ def update_index(project):
             "update_index",
             "--disable-change-limit",
         ],
-        project=project,
+        project,
     )
     return 0

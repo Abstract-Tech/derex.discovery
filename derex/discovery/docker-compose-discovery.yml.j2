@@ -28,6 +28,7 @@ services:
       SERVICE_VARIANT: discovery
       DJANGO_SETTINGS_MODULE: course_discovery.settings.derex_project.{{ active_settings }}
       MYSQL_DB_NAME: "{{ project.name }}_discovery"
+      MYSQL_DB_PASSWORD: {{ project.secret("mysql") }}
       {%- for key, value in project.get_container_env().items() %}
       {{ key }}: {{ value | tojson }}
       {%- endfor %}
