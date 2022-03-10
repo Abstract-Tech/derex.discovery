@@ -1,0 +1,30 @@
+[
+  {
+    "model": "oauth2.client",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "name": "ecommerce",
+      "url": "http://ecommerce.discovery-complete.localhost",
+      "redirect_uri": "http://ecommerce.discovery-complete.localhost/complete/edx-oidc/",
+      "client_id": "ecommerce-key",
+      "client_secret": "ecommerce-secret",
+      "client_type": 0,
+      "logout_uri": "http://ecommerce.discovery-complete.localhost/logout"
+    }
+  },
+  {
+    "model": "oauth2.client",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "name": "discovery",
+      "url": "http://discovery.discovery-complete.localhost",
+      "redirect_uri": "http://discovery.discovery-complete.localhost/complete/edx-oidc/",
+      "client_id": "discovery-key",
+      "client_secret": "discovery-secret",
+      "client_type": 0,
+      "logout_uri": "http://discovery.discovery-complete.localhost/logout"
+    }
+  }
+]

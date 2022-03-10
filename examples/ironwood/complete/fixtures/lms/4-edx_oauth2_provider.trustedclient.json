@@ -1,0 +1,16 @@
+[
+  {
+    "model": "edx_oauth2_provider.trustedclient",
+    "pk": 1,
+    "fields": {
+      "client": 1
+    }
+  },
+  {
+    "model": "edx_oauth2_provider.trustedclient",
+    "pk": 2,
+    "fields": {
+      "client": 2
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "model": "partner.partner",
+    "pk": 1,
+    "fields": {
+      "code": "derex",
+      "name": "derex",
+      "short_code": "derex",
+      "enable_sailthru": true,
+      "default_site": 1,
+      "users": []
+    }
+  }
+]

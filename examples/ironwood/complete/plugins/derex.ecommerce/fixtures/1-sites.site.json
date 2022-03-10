@@ -1,0 +1,10 @@
+[
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+      "domain": "ecommerce.discovery-complete.localhost",
+      "name": "ecommerce.discovery-complete.localhost"
+    }
+  }
+]

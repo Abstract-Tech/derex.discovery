@@ -1,0 +1,44 @@
+[
+  {
+    "model": "student.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "name": "discovery_worker",
+      "courseware": "course.xml",
+      "language": "",
+      "location": "",
+      "year_of_birth": null,
+      "gender": null,
+      "level_of_education": null,
+      "mailing_address": null,
+      "city": null,
+      "country": "",
+      "goals": null,
+      "allow_certificate": true,
+      "bio": null,
+      "profile_image_uploaded_at": null
+    }
+  },
+  {
+    "model": "student.userprofile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "name": "superuser",
+      "courseware": "course.xml",
+      "language": "",
+      "location": "",
+      "year_of_birth": null,
+      "gender": null,
+      "level_of_education": null,
+      "mailing_address": null,
+      "city": null,
+      "country": "",
+      "goals": null,
+      "allow_certificate": true,
+      "bio": null,
+      "profile_image_uploaded_at": null
+    }
+  }
+]
