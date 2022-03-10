@@ -7,7 +7,7 @@ jobs:
   - job: Minimal${{ parameters.JOB_VARIANT }}
     timeoutInMinutes: 40
     pool:
-      vmImage: "ubuntu-latest"
+      vmImage: $(UBUNTU_VERSION)
     steps:
       - template: setup.yml
         parameters:
@@ -35,7 +35,6 @@ jobs:
           cd tests/fixtures/minimal/
           ddc-project logs
         displayName: "Show logs"
-
 
       - script: |
           set -ex

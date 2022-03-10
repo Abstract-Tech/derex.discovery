@@ -22,3 +22,7 @@ jobs:
   - template: azure-pipelines/complete.yml
     parameters:
       JOB_VARIANT: Pinned
+
+variables:
+  - name: UBUNTU_VERSION
+    value: ubuntu-latest
