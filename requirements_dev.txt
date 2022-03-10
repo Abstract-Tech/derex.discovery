@@ -34,8 +34,12 @@ commonmark==0.9.1
     # via rich
 cryptography==36.0.1
     # via paramiko
-https://github.com/Abstract-Tech/derex.runner/tarball/v0.3.3.dev3#egg=derex.runner
+https://github.com/Abstract-Tech/derex.ecommerce/tarball/feature/koa-upgrade#egg=derex.ecommerce
     # via -r requirements.in
+https://github.com/Abstract-Tech/derex.runner/tarball/v0.3.3.dev3#egg=derex.runner
+    # via
+    #   -r requirements.in
+    #   derex.ecommerce
 distlib==0.3.4
     # via virtualenv
 distro==1.7.0
@@ -57,7 +61,9 @@ idna==3.3
 importlib-metadata==4.11.2
     # via derex.runner
 jinja2==3.0.3
-    # via derex.runner
+    # via
+    #   derex.ecommerce
+    #   derex.runner
 jsonschema==3.2.0
     # via docker-compose
 markupsafe==2.1.0
