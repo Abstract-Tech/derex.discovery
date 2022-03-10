@@ -7,7 +7,7 @@ with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
 requirements = [
-    "derex.runner",
+    "derex.runner>=0.3.3",
     "jinja2",
 ]
 
