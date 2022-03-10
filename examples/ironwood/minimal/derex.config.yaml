@@ -1,4 +1,5 @@
 ---
 project_name: discovery-minimal
+openedx_version: ironwood
 plugins:
   derex.discovery: {}

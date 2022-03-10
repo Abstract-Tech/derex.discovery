@@ -1,7 +1,7 @@
 # flake8: noqa
 # type: ignore
 
-from .derex import *
+from derex_django.settings.default import *
 
 FEATURES["ENABLE_OAUTH2_PROVIDER"] = True
 OAUTH_OIDC_ISSUER = "http://discovery-complete.localhost/oauth2"

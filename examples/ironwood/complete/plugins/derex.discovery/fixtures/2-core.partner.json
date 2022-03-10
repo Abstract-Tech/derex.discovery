@@ -15,7 +15,7 @@
       "marketing_site_url_root": null,
       "marketing_site_api_username": null,
       "marketing_site_api_password": null,
-      "oidc_url_root": "http://discovery-complete.localhost.derex/oauth2",
+      "oidc_url_root": "http://discovery-complete.localhost/oauth2",
       "oidc_key": "discovery-key",
       "oidc_secret": "discovery-secret",
       "studio_url": "http://studio.discovery-complete.localhost",

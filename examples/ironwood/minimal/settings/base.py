@@ -1,4 +1,4 @@
-from .derex import *
+from derex_django.settings.default import *
 
 FEATURES["ENABLE_OAUTH2_PROVIDER"] = True
 
