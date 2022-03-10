@@ -7,7 +7,7 @@ with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
 requirements = [
-    "derex.runner>=0.3.3",
+    "derex.runner",
     "jinja2",
 ]
 
@@ -53,4 +53,7 @@ setup(
     url="https://github.com/Abstract-Tech/derex.discovery",
     version="0.0.1",
     zip_safe=False,
+    dependency_links=[
+        "https://github.com/Abstract-Tech/derex.runner/tarball/v0.3.3.dev1#egg=derex.runner"
+    ],
 )

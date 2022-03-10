@@ -27,8 +27,7 @@ repos:
         args:
           ["--install-types", "--non-interactive", "--ignore-missing-imports"]
         exclude: "^\
-          examples/.*|\
-          docker_build/ecommerce/derex_ecommerce_django/derex_ecommerce_django/settings/default/.*|\
+          examples/.*\
           $"
 
   - repo: https://github.com/ambv/black
