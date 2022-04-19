@@ -1,0 +1,36 @@
+[
+  {
+    "model": "core.siteconfiguration",
+    "pk": 1,
+    "fields": {
+      "site": 1,
+      "partner": 1,
+      "lms_url_root": "http://discovery-koa-complete.localhost",
+      "theme_scss_path": null,
+      "payment_processors": "",
+      "client_side_payment_processor": "",
+      "oauth_settings": "{\"SOCIAL_AUTH_EDX_OIDC_ID_TOKEN_DECRYPTION_KEY\":\"ecommerce-secret\",\"SOCIAL_AUTH_EDX_OIDC_URL_ROOT\":\"http://discovery-koa-complete.localhost/oauth2\",\"SOCIAL_AUTH_EDX_OIDC_ISSUERS\":[\"http://discovery-koa-complete.localhost\"],\"SOCIAL_AUTH_EDX_OIDC_KEY\":\"ecommerce-key\",\"SOCIAL_AUTH_EDX_OIDC_SECRET\":\"ecommerce-secret\"}",
+      "segment_key": null,
+      "from_email": "ecommerce@example.com",
+      "enable_enrollment_codes": false,
+      "payment_support_email": "support@example.com",
+      "payment_support_url": "",
+      "utm_cookie_name": "",
+      "affiliate_cookie_name": "",
+      "send_refund_notifications": false,
+      "enable_sdn_check": false,
+      "sdn_api_url": "",
+      "sdn_api_key": "",
+      "sdn_api_list": "",
+      "require_account_activation": true,
+      "optimizely_snippet_src": "",
+      "enable_sailthru": false,
+      "base_cookie_domain": "",
+      "enable_embargo_check": false,
+      "discovery_api_url": "http://discovery.discovery-koa-complete.localhost/api/v1/",
+      "journals_api_url": null,
+      "enable_apple_pay": false,
+      "enable_partial_program": false
+    }
+  }
+]

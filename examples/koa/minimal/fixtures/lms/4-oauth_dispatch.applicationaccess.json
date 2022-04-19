@@ -1,0 +1,11 @@
+[
+  {
+    "model": "oauth_dispatch.applicationaccess",
+    "pk": 1,
+    "fields": {
+      "application": 2,
+      "scopes": "user_id,profile,email",
+      "filters": ""
+    }
+  }
+]

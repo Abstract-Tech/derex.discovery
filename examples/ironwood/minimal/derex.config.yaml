@@ -1,5 +1,5 @@
 ---
-project_name: discovery-minimal
+project_name: discovery-ironwood-minimal
 openedx_version: ironwood
 plugins:
   derex.discovery: {}

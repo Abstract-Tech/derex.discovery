@@ -34,7 +34,7 @@ cryptography==36.0.1
     # via paramiko
 https://github.com/Abstract-Tech/derex.ecommerce/tarball/feature/koa-upgrade#egg=derex.ecommerce
     # via -r requirements.in
-https://github.com/Abstract-Tech/derex.runner/tarball/v0.3.3.dev3#egg=derex.runner
+https://github.com/Abstract-Tech/derex.runner/tarball/v0.3.3.dev6#egg=derex.runner
     # via
     #   -r requirements.in
     #   derex.ecommerce

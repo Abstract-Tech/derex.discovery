@@ -1,0 +1,31 @@
+---
+project_name: discovery-koa-minimal
+openedx_version: koa
+plugins:
+  derex.discovery: {}
+
+variables:
+  ALL_JWT_ISSUER:
+    base: http://discovery-koa-minimal.localhost/oauth2
+  ALL_JWT_AUDIENCE:
+    base: lms-key
+  ALL_JWT_SECRET_KEY:
+    base: lms-secret
+
+  ALL_JWT_PRIVATE_SIGNING_JWK:
+    base: >-
+      {"e": "AQAB", "d": "OpJOHA1A-mac1AWJHhHqjVYSzPgPg1VMgGlAKHGh_K49qC6P8RuGQjW-CV8Q3Cdzr1EHBpbarubJa56kXcB7lg1BbZjLzG49gS5QROxJMEyeW_TIOhGVqxw-ufIrF1jkFm8zqKNvUbrO2embNm_xQSJMPbv73UOI4DbsQt3qMaJZGNNbJErgW7MPwOwt9U0WFg0JuA3_SCA1bfgM5_5g4HymB24HLNivDYauMTdeGjmmBVwKgNABa2QxKkvkXcq9ce9t8SqI13m7cAObLrAY6Zwk9Ua49dxrHRDe6iuENHk1FFJc66VHUBdaXTned-WPriQRDB-4FruOjIA1TARFiw", "n": "vuT5et1QoIGkW6rYNFZZX9cPHleom235XQ25jkwfrbXLsagYL0AcfQsSm5LFgrGBYAt8103Vg4XdDwraWnBKiKBaK9xliDcSvSqpJW39hmEBYDqDgjdJf4fx-RKyI0b2HlqvApeJKKhphe3L3gxvJ56Mqh0Vx4fY4ysRhX4RoGrFkHekrfgiVds4ZZA44tFTFoLfMtU9vk__64S43UrMikIYge9MIQwu7geDCfR4JmWNB8yBkUHSTDKmg_ezijq15T4fNVOhUloX86y878F2W0VeWtgne2oV-PFPBrRqExEVspvxZU4nQcQH46viROWhWkkSNHJdpRyeVlkwZuaWUQ", "q": "7tL0NlwlaBAC5_FgsY56ND-BkB4M8bySNZEBjHpUcJzaiO7FMCzG6biDTtSXXlDJMwQ7hbVZWMKg8P-QxFYH8B-zW6RLgFZcLiFZeIaU6KrOZmL5675ctonxk2s-P0ljOClvf5hdABCbLIllFih3xsupazj8c9pSwJ3zOkgiPFs", "p": "zJ-Tw-BAELpG2ejywk_nLCRWbKxNoUvPYKV3TaooDlJAl1vcTyJW2mGP_xIi7EAIJCy5g7ZyfOSu3LdEjw0Zq6VCC-CEhC8EOP-dcQdtwPEA42pHWYPcLKZsXBsLp8YdmQYg41xCCiRGFm-Xbr0uqAnHkVZWRI7WMuO36Bm-Z8M", "kid": "E35W5BKM", "kty": "RSA"}
+  ALL_JWT_PUBLIC_SIGNING_JWK_SET:
+    base: >-
+      {"keys": [{"kid": "E35W5BKM", "e": "AQAB", "kty": "RSA", "n": "vuT5et1QoIGkW6rYNFZZX9cPHleom235XQ25jkwfrbXLsagYL0AcfQsSm5LFgrGBYAt8103Vg4XdDwraWnBKiKBaK9xliDcSvSqpJW39hmEBYDqDgjdJf4fx-RKyI0b2HlqvApeJKKhphe3L3gxvJ56Mqh0Vx4fY4ysRhX4RoGrFkHekrfgiVds4ZZA44tFTFoLfMtU9vk__64S43UrMikIYge9MIQwu7geDCfR4JmWNB8yBkUHSTDKmg_ezijq15T4fNVOhUloX86y878F2W0VeWtgne2oV-PFPBrRqExEVspvxZU4nQcQH46viROWhWkkSNHJdpRyeVlkwZuaWUQ"}]}
+  ALL_JWT_SIGNING_ALGORITHM:
+    base: RS512
+
+  ALL_BACKEND_SERVICE_EDX_OAUTH2_SECRET:
+    base: lms-discovery-backend-service-secret
+
+  ALL_BACKEND_SERVICE_EDX_OAUTH2_KEY:
+    base: lms-discovery-backend-service-key
+
+  ALL_BACKEND_SERVICE_EDX_OAUTH2_PROVIDER_URL:
+    base: http://discovery-koa-minimal.localhost

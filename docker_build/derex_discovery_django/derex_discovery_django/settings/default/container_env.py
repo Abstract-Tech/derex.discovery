@@ -1,7 +1,6 @@
 import json
 import os
 
-
 SERVICE_VARIANT = os.environ["SERVICE_VARIANT"]
 
 string_prefixes = ["DEREX_ALL_", "DEREX_{}_".format(SERVICE_VARIANT.upper())]

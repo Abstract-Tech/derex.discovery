@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   discovery:
-    image: derex/discovery:ironwood
+    image: {{ discovery_docker_image }}
     volumes:
       - derex_{{ project.name }}_media:/openedx/media
       - {{ settings_dir }}:/openedx/discovery/course_discovery/settings/derex_project
@@ -37,6 +37,12 @@ services:
         aliases:
           - discovery.{{ project.name }}.localhost.derex
           - discovery.{{ project.name }}.localhost
+
+  lms:
+    networks:
+      derex:
+        aliases:
+          - {{ project.name }}.localhost
 
 volumes:
   derex_{{ project.name }}_media:

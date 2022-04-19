@@ -5,16 +5,16 @@ services:
     networks:
       derex:
         aliases:
-          - discovery-complete.localhost
+          - discovery-ironwood-complete.localhost
 
   cms:
     networks:
       derex:
         aliases:
-          - studio.discovery-complete.localhost
+          - studio.discovery-ironwood-complete.localhost
 
   ecommerce:
     networks:
       derex:
         aliases:
-          - ecommerce.discovery-complete.localhost
+          - ecommerce.discovery-ironwood-complete.localhost

@@ -1,0 +1,31 @@
+diff --git a/course_discovery/apps/api/serializers.py b/course_discovery/apps/api/serializers.py
+index 40e95f71..b7210b15 100644
+--- a/course_discovery/apps/api/serializers.py
++++ b/course_discovery/apps/api/serializers.py
+@@ -551,7 +551,7 @@ class MinimalPublisherCourseRunSerializer(TimestampModelSerializer):
+
+
+ class MinimalCourseRunSerializer(TimestampModelSerializer):
+-    image = ImageField(read_only=True, source='image_url')
++    image = ImageField(read_only=True, source='card_image_url')
+     marketing_url = serializers.SerializerMethodField()
+     seats = SeatSerializer(many=True)
+
+@@ -671,7 +671,7 @@ class MinimalCourseSerializer(TimestampModelSerializer):
+     course_runs = MinimalCourseRunSerializer(many=True)
+     entitlements = CourseEntitlementSerializer(many=True)
+     owners = MinimalOrganizationSerializer(many=True, source='authoring_organizations')
+-    image = ImageField(read_only=True, source='image_url')
++    image = ImageField(read_only=True, source='card_image_url')
+
+     @classmethod
+     def prefetch_queryset(cls, queryset=None, course_runs=None):
+@@ -1456,7 +1456,7 @@ class CourseRunSearchSerializer(HaystackSerializer):
+             'first_enrollable_paid_seat_price',
+             'full_description',
+             'has_enrollable_seats',
+-            'image_url',
++            'card_image_url',
+             'key',
+             'language',
+             'level_type',

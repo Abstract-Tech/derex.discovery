@@ -1,5 +1,5 @@
 ---
-project_name: discovery-complete
+project_name: discovery-ironwood-complete
 openedx_version: ironwood
 plugins:
   derex.discovery: {}
@@ -7,7 +7,7 @@ plugins:
 
 variables:
   ALL_JWT_ISSUER:
-    base: http://discovery-complete.localhost/oauth2
+    base: http://discovery-ironwood-complete.localhost/oauth2
   ALL_JWT_AUDIENCE:
     base: lms-key
   ALL_JWT_SECRET_KEY:

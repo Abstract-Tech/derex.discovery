@@ -38,12 +38,12 @@ jobs:
 
       - script: |
           set -ex
-          curl -f http://discovery.discovery-minimal.localhost/health/ \
+          curl -f http://discovery.discovery-ironwood-minimal.localhost/health/ \
             --connect-timeout 30 \
             --retry 5 \
             --retry-delay 5 \
             --retry-connrefused
-          [ "$(curl -f http://discovery.discovery-minimal.localhost/health/ | jq '.overall_status')" == '"OK"' ]
+          [ "$(curl -f http://discovery.discovery-ironwood-minimal.localhost/health/ | jq '.overall_status')" == '"OK"' ]
         displayName: "Curl the Discovery service"
 
       - script: |

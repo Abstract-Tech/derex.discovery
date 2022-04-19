@@ -1,0 +1,18 @@
+[
+  {
+    "model": "oauth2_provider.application",
+    "pk": 2,
+    "fields": {
+      "client_id": "discovery-key",
+      "user": 1,
+      "redirect_uris": "http://discovery.discovery-koa-minimal.localhost/complete/edx-oauth2/",
+      "client_type": "confidential",
+      "authorization_grant_type": "authorization-code",
+      "client_secret": "discovery-secret",
+      "name": "Discovery Service",
+      "skip_authorization": false,
+      "created": "2022-04-19T15:41:18.660Z",
+      "updated": "2022-04-19T15:41:18.660Z"
+    }
+  }
+]

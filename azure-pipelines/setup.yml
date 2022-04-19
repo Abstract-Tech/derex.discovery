@@ -26,7 +26,7 @@ steps:
       sudo systemctl enable dnsmasq
       sudo systemctl restart dnsmasq
       # Resolve docker registry and foobar.localhost hostnames to make sure everything works
-      dig registry-1.docker.io @127.0.0.53 && dig foobar.localhost @127.0.0.53 && getent hosts foobar.localhost discovery-minimal.localhost discovery.discovery-minimal.localhost discovery.discovery-complete.localhost foo.bar.localhost registry-1.docker.io
+      dig registry-1.docker.io @127.0.0.53 && dig foobar.localhost @127.0.0.53 && getent hosts foobar.localhost discovery-ironwood-minimal.localhost discovery.discovery-ironwood-minimal.localhost discovery.discovery-ironwood-complete.localhost foo.bar.localhost registry-1.docker.io
     displayName: "Install dnsmasq to make *.localhost work"
 
   - script: |

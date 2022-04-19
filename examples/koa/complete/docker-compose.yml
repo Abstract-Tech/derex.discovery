@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+  lms:
+    networks:
+      derex:
+        aliases:
+          - discovery-koa-complete.localhost
+
+  cms:
+    networks:
+      derex:
+        aliases:
+          - studio.discovery-koa-complete.localhost
+
+  ecommerce:
+    networks:
+      derex:
+        aliases:
+          - ecommerce.discovery-koa-complete.localhost

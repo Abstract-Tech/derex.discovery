@@ -5,12 +5,12 @@
     "fields": {
       "user": 1,
       "name": "discovery",
-      "url": "http://discovery.discovery-complete.localhost",
-      "redirect_uri": "http://discovery.discovery-complete.localhost/complete/edx-oidc/",
+      "url": "http://discovery.discovery-ironwood-complete.localhost",
+      "redirect_uri": "http://discovery.discovery-ironwood-complete.localhost/complete/edx-oidc/",
       "client_id": "discovery-key",
       "client_secret": "discovery-secret",
       "client_type": 0,
-      "logout_uri": "http://discovery.discovery-complete.localhost/logout"
+      "logout_uri": "http://discovery.discovery-ironwood-complete.localhost/logout"
     }
   }
 ]

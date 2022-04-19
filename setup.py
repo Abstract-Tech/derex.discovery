@@ -45,7 +45,7 @@ setup(
     include_package_data=True,
     keywords="derex.discovery",
     name="derex.discovery",
-    packages=find_namespace_packages(include=["derex.discovery"]),
+    packages=find_namespace_packages(include=["derex.*"]),
     namespace_packages=["derex"],
     setup_requires=setup_requirements,
     test_suite="tests",
@@ -54,6 +54,6 @@ setup(
     version="0.0.1",
     zip_safe=False,
     dependency_links=[
-        "https://github.com/Abstract-Tech/derex.runner/tarball/v0.3.3.dev1#egg=derex.runner"
+        "https://github.com/Abstract-Tech/derex.runner/tarball/v0.3.3.dev6#egg=derex.runner"
     ],
 )

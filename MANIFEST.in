@@ -6,7 +6,8 @@ include README.rst
 
 include derex/discovery/docker-compose-discovery.yml.j2
 
-recursive-include derex/discovery/ * *.py
+recursive-include docker_build *
+recursive-include docker_build/derex_discovery_django *
 recursive-include tests *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]

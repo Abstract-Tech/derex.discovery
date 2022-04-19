@@ -1,0 +1,26 @@
+[
+  {
+    "model": "core.partner",
+    "pk": 1,
+    "fields": {
+      "created": "2019-06-18T00:29:29.749Z",
+      "modified": "2019-06-18T00:29:29.749Z",
+      "name": "Derex",
+      "short_code": "derex",
+      "organizations_api_url": null,
+      "marketing_site_api_url": null,
+      "marketing_site_url_root": null,
+      "marketing_site_api_username": null,
+      "marketing_site_api_password": null,
+      "lms_url": "http://discovery-koa-minimal.localhost",
+      "lms_admin_url": "http://discovery-koa-minimal.localhost/admin",
+      "studio_url": "http://studio.discovery-koa-minimal.localhost",
+      "courses_api_url": "http://discovery-koa-minimal.localhost/api/courses/v1/",
+      "ecommerce_api_url": null,
+      "programs_api_url": null,
+      "site": 1,
+      "analytics_url": "",
+      "analytics_token": ""
+    }
+  }
+]
