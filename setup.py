@@ -51,7 +51,7 @@ setup(
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/Abstract-Tech/derex.discovery",
-    version="0.0.1",
+    version="0.0.2",
     zip_safe=False,
     dependency_links=[
         "https://github.com/Abstract-Tech/derex.runner/tarball/v0.3.3.dev6#egg=derex.runner"

@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="derex_discovery_django",
-    version="0.0.1",
+    version="0.0.2",
     description="Support package for derex",
     url="http://github.com/Abstract-Tech/derex.discovery",
     author="Chiruzzi Marco",
